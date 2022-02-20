@@ -1,5 +1,9 @@
-<h1><%= @place.name %><h1>
-<h1><%= @post.title %></h1>
-<h2><%= @post.description %>, <%= @post.posted_on %>
+<%= @place.name %>
+
 <ul>
- 
+ <% for post in @place.posts %>
+ <li>, <%= post.title %>, <%= post.description %>, <%= post.posted_on %>
+ <% end %>
+ </ul>
+ <p>
+ <a href="/posts/new?post_id=<%= @place.id %>" >create new post </a>
