@@ -2,8 +2,10 @@
 
 <ul>
  <% for post in @place.posts %>
- <li>, <%= post.title %>, <%= post.description %>, <%= post.posted_on %>
+ <li><p> <%= "#{post.title}" %></p>
+ <p> <%= "#{post.description}" %></p> 
+ <p> <%= "#{post.posted_on}" %></p>
  <% end %>
  </ul>
  <p>
- <a href="/posts/new?post_id=<%= @place.id %>" >create new post </a>
+ <a href="/posts/new?place_id=<%= @place.id %>" >create new post </a>
